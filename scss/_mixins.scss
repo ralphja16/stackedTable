@@ -1,0 +1,143 @@
+// MIXINS
+
+// Border radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+
+// Transition
+@mixin transition($property, $timing) {
+  transition: $property $timing ease;
+  -webkit-transition: $property $timing ease;
+  -moz-transition: $property $timing ease;
+  -o-transition: $property $timing ease;
+}
+
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 15%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+    }
+  }
+}
+
+// Animations
+//
+// All animation prefixes
+// @include keyframes(slide-down) {}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+// Useage: @include animation('slide-down 5s 3');
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+// Opacity
+//
+// Crossbrowser opacity all to IE5
+// Useage: @include opacity(0.8);
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Center-align block level element
+//
+// Quickly center any element within its parent.
+// Requires width or max-width to be set.
+// Useage: @include center-block;
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Reset
+@mixin reset {
+  margin:0;
+  padding:0;
+}
+
+// Vertical align anything
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

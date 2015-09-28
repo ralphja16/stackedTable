@@ -1,0 +1,49 @@
+// VARIABLES ARE BASED ON BOOTSTRAP v.3
+
+// COLORS
+$white:             #FFFFFFF;
+$black:             #000000;
+$gray:              #DEDEDE;
+$gray-light:        #999999;
+$gray-lighter:      #FCFCFC;
+$gray-dark:         #666666;
+$gray-darker:       #333333;
+$green:             #7ED321;
+$red:               #FE4E49;
+$blue:              #419BF9;
+
+
+// GLOBAL STYLES
+$border-radius:             3px;
+
+$padding-small:             10px;
+$padding-medium:            15px;
+$padding-large:             30px;
+
+//MEDIA QUERIES
+
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  767px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

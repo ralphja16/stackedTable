@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Responsive DIV Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="section__wrapper--nopadding row">
+            <div class="section__wrapper__head--list">
+                <h1 class="section__wrapper__head__title--action">Table Title</h1>
+
+                <div class="section__wrapper__head__actions">
+                    <a href="javascript:void"></a>
+                </div>
+            </div>
+            <div  class="list">
+
+                <div class="list-wrapper">
+                    <div class="list-view">
+                        <div class="list-view__header">
+                            <div class="list-view__header__cell">Id</div>
+                            <div class="list-view__header__cell">Name</div>
+                            <div class="list-view__header__cell">Emailaddress</div>
+                            <div class="list-view__header__cell">Country</div>
+                            <div class="list-view__header__cell">Phone</div>
+                            <div class="list-view__header__cell hidden-sm hidden-xs">Active</div>
+                            <div class="list-view__header__cell list-view__header__cell--actie">Action</div>
+                        </div>
+
+                        <div class="list-view__body__row">
+                            <span class="list-view__body__cell--status open hidden-md hidden-lg"></span>
+                            <div class="list-view__body__cell">1</div>
+                            <div class="list-view__body__cell">Ralph Janssen</div>
+                            <div class="list-view__body__cell">ralphjanssen@gmail.com</div>
+                            <div class="list-view__body__cell">The Netherlands</div>
+                            <div class="list-view__body__cell">+31 12345678</div>
+                            <div class="list-view__body__cell hidden-xs hidden-sm">
+                                <span class="list-view__body__cell--status open">Yes</span>
+                            </div>
+                            <div class="list-view__body__cell list-view__body__cell--actie">
+                                <a href="#" class="material-icons flaticon-show8 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

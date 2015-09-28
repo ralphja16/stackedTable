@@ -1,0 +1,48 @@
+// BASE HTML STYLING
+
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+@media all and (min-width: $screen-lg-min) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: $screen-sm) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none!important;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .hidden-sm {
+        display: none!important;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .hidden-md {
+        display: none!important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none!important;
+    }
+}

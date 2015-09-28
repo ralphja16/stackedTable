@@ -1,0 +1,244 @@
+
+.list{
+
+    &__title{
+        margin-left: $padding-small;
+
+        @media screen and (min-width: $screen-xs-min) {
+            margin-left: $padding-medium;
+
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-left: $padding-large;
+        }
+    }
+
+    &-wrapper {
+        background-color: $gray-lighter;
+        width: 100%;
+        position: relative;
+
+        &--notStacked{
+
+        }
+
+        .list-view {
+            background: $white;
+            margin-bottom: 0;
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+
+            &__header{
+                border-top: 1px solid $gray;
+                width: 100%;
+                padding: $padding-small;
+                position: relative;
+
+                &--tabs{
+                    border-top: none;
+                }
+
+                    @media screen and (min-width: $screen-xs-min) {
+                        padding: $padding-medium;
+                    }
+
+                    @media screen and (min-width: $screen-md) {
+                        display: table-row;
+                        height: 46px;
+                        padding: $padding-large;
+                    }
+
+                &__cell {
+                    color: $gray-light;
+                    text-transform: uppercase;
+                    font-size: 0.75em;
+                    padding: 5px 0;
+
+                    &--actie{
+                        position: absolute;
+                        top: 10px;
+                        right: $padding-small;
+
+                        @media screen and (min-width: $screen-xs-min) {
+                            right: $padding-medium;
+                        }
+
+                        @media screen and (min-width: $screen-md) {
+                            position: initial;
+                            text-align: right;
+                        }
+
+                    }
+
+                    @media screen and (min-width: $screen-md) {
+                        display: table-cell;
+                        padding: $padding-medium $padding-large;
+                    }
+
+                }
+            }
+
+            &__body{
+
+                &__row{
+                    position: relative;
+                    border-top: 1px solid $gray;
+                    width: 100%;
+                    padding: $padding-small $padding-medium;
+
+                    @media screen and (min-width: $screen-md) {
+                        display: table-row;
+                        height: 73px;
+                        padding: $padding-small;
+                    }
+                }
+
+                &__cell {
+                    padding: 5px 0;
+                    vertical-align: middle;
+
+                    @media screen and (min-width: $screen-md) {
+                        display: table-cell;
+                        padding: $padding-small $padding-large;
+                    }
+
+                    &--date{
+                        @media screen and (max-width: $screen-md) {
+                            color: $gray-light;
+                        }
+                    }
+
+                    &--name{
+
+                    }
+
+
+                    &--desc{
+                        @media screen and (max-width: $screen-md) {
+                            color: $gray-light;
+                            font-style: italic;
+                        }
+                    }
+
+                    &--status {
+
+                        @media screen and (max-width: $screen-md) {
+                            padding: 0;
+                            width: 3px;
+                            height: 100%;
+                            display: inline-block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+                         @media screen and (min-width: $screen-md) {
+                            border: 1px solid;
+                            padding: 5px $padding-small;
+                            @include border-radius($border-radius);
+                        }
+
+                        > span {
+                             @media screen and (max-width: $screen-md) {
+                                width: 3px;
+                                height: 100%;
+                                display: block;
+                            }
+                        }
+
+                        &.open, &.send {
+                            background: $green;
+
+                            @media screen and (min-width: $screen-md) {
+
+                                background: none;
+                                color: $green;
+                                border-color: $green;
+                            }
+                        }
+                        &.closed {
+                            background: $red;
+
+                            @media screen and (min-width: $screen-md) {
+                                background: none;
+                                color: $red;
+                                border-color: $red;
+                            }
+                        }
+                    }
+
+                    &--actie {
+                        text-align: right;
+                        position: relative;
+
+                        @media screen and (max-width: $screen-md) {
+                            display: inline;
+                            float: right;
+                            width: 20%;
+                            position: absolute;
+                            top: 35%;
+                            right: 10px;
+                            padding:0;
+                        }
+
+                        &.open{
+                            //@include transition(all 200ms);
+
+                            a.hp-icon{
+                                color: $red;
+                            }
+                        }
+
+                        a.hp-icon{
+                            font-size: 2em;
+                            color: $blue;
+                            text-decoration: none;
+                            //@include transition(all 200ms);
+
+                            &:hover{
+                                color: $red;
+                            }
+                        }
+
+                        .dropdown-menu{
+                            position: absolute;
+                            background: $blue;
+                            border: 1px solid $blue;
+                            right: -10px;
+                            top: 40px;
+                            left:initial;
+                            //@include transition(all 200ms);
+
+                            @media screen and (min-width: $screen-md) {
+                                top: 55px;
+                                right:0;
+                            }
+
+                            li{
+
+                                a{
+                                    color: $white;
+                                    font-size: 1em;
+
+                                    .hp-icon{
+                                        color: $gray;
+                                        padding-right: 10px;
+                                    }
+
+                                    &:hover{
+                                        color: $gray-darker;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
