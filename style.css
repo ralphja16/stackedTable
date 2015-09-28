@@ -557,18 +557,18 @@ html {
   font-size: 0.75em;
   padding: 5px 0;
 }
-.list-wrapper .list-view__header__cell--actie {
+.list-wrapper .list-view__header__cell--action {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 @media screen and (min-width: 480px) {
-  .list-wrapper .list-view__header__cell--actie {
+  .list-wrapper .list-view__header__cell--action {
     right: 15px;
   }
 }
 @media screen and (min-width: 992px) {
-  .list-wrapper .list-view__header__cell--actie {
+  .list-wrapper .list-view__header__cell--action {
     position: initial;
     text-align: right;
   }
@@ -660,12 +660,12 @@ html {
     border-color: #FE4E49;
   }
 }
-.list-wrapper .list-view__body__cell--actie {
+.list-wrapper .list-view__body__cell--action {
   text-align: right;
   position: relative;
 }
 @media screen and (max-width: 992px) {
-  .list-wrapper .list-view__body__cell--actie {
+  .list-wrapper .list-view__body__cell--action {
     display: inline;
     float: right;
     width: 20%;
@@ -675,41 +675,16 @@ html {
     padding: 0;
   }
 }
-.list-wrapper .list-view__body__cell--actie.open a.hp-icon {
+.list-wrapper .list-view__body__cell--action.open a {
   color: #FE4E49;
 }
-.list-wrapper .list-view__body__cell--actie a.hp-icon {
-  font-size: 2em;
+.list-wrapper .list-view__body__cell--action a {
+  font-size: 1em;
   color: #419BF9;
   text-decoration: none;
 }
-.list-wrapper .list-view__body__cell--actie a.hp-icon:hover {
+.list-wrapper .list-view__body__cell--action a:hover {
   color: #FE4E49;
-}
-.list-wrapper .list-view__body__cell--actie .dropdown-menu {
-  position: absolute;
-  background: #419BF9;
-  border: 1px solid #419BF9;
-  right: -10px;
-  top: 40px;
-  left: initial;
-}
-@media screen and (min-width: 992px) {
-  .list-wrapper .list-view__body__cell--actie .dropdown-menu {
-    top: 55px;
-    right: 0;
-  }
-}
-.list-wrapper .list-view__body__cell--actie .dropdown-menu li a {
-  color: #FFFFFFF;
-  font-size: 1em;
-}
-.list-wrapper .list-view__body__cell--actie .dropdown-menu li a .hp-icon {
-  color: #DEDEDE;
-  padding-right: 10px;
-}
-.list-wrapper .list-view__body__cell--actie .dropdown-menu li a:hover {
-  color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */
