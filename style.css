@@ -437,7 +437,7 @@ html {
 .section__wrapper {
   padding: 0;
   margin-bottom: 10px;
-  background: #FFFFFFF;
+  background: #FFFFFF;
   border: 1px solid #DEDEDE;
 }
 .section__wrapper__head {
@@ -488,7 +488,7 @@ html {
 
 .section__wrapper--nopadding {
   margin-bottom: 10px;
-  background: #FFFFFFF;
+  background: #FFFFFF;
   border: 1px solid #DEDEDE;
 }
 @media screen and (min-width: 767px) {
@@ -524,7 +524,7 @@ html {
   position: relative;
 }
 .list-wrapper .list-view {
-  background: #FFFFFFF;
+  background: #FFFFFF;
   margin-bottom: 0;
   display: table;
   border-collapse: collapse;
@@ -591,6 +591,9 @@ html {
     height: 73px;
     padding: 10px;
   }
+}
+.list-wrapper .list-view__body__row--odd {
+  background: #FCFCFC;
 }
 .list-wrapper .list-view__body__cell {
   padding: 5px 0;
